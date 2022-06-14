@@ -4,9 +4,9 @@ from django.db import models
 from numpy import require
 
 # Create your models here.
-class Estudiante(models.Model):
-    nombre = models.CharField(max_length=30)
-    apellido = models.CharField(max_length=30)
-    email = models.EmailField(blank=True, null=True)
-    
+class family(models.Model):
+    name = models.CharField(max_length=30)
+    date_of_birth = models.DateField()
+    gender = models.CharField(max_length=1)
+    relationship = models.CharField(max_length=10)
     
