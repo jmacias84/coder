@@ -5,8 +5,12 @@ from numpy import require
 
 # Create your models here.
 class family(models.Model):
-    name = models.CharField(max_length=30)
-    date_of_birth = models.DateField()
-    gender = models.CharField(max_length=1)
-    relationship = models.CharField(max_length=10)
+    nombre = models.CharField(max_length=30)
+    fechanacimiento = models.DateField()
+    genero = models.CharField(max_length=1)
+    parentesco = models.CharField(max_length=10)
+    
+    def __str__(self):
+        fila = "nombre: " + self.name + " - " + "fechanacimiento: " + str(self.date_of_birth) + " - " + "fenero: " + self.gender + " - " + "parentesco: " + self.relationship
+        return fila
     

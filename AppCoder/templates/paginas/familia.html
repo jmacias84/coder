@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,31 @@
     <title>familia</title>
 </head>
 <body>
+    
     <h1 class>Bienvenido a mi página</h1>
-    <p>Bienvenido a mi página</p>
+    <p>Lista de familiares:</p>
+
+    <table class="table table-striped-columns">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Parentesco</th>
+            <th scope="col">Fecha Nacimiento</th>
+            <th scope="col">Género</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          {% for familia in familiares %}
+          <tr>
+            <td>{{ familia.nombre }}</td>
+            <td>{{ familia.parentesco }}</td>
+            <td>{{ familia.fechanacimiento }}</td>
+            <td>{{ familia.genero }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
 </body>
 </html>
